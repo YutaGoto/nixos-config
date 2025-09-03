@@ -15,7 +15,7 @@
     # --- rust tools
     bat
     eza
- 
+
     # --- Web開発 ---
     nodejs_22
     pnpm
@@ -39,6 +39,9 @@
 
   # Install firefox.
   programs.firefox.enable = true;
+
+  # Enable the Nix LDFLAGS wrapper for better compatibility with C programs
+  programs.nix-ld.enable = true;
 
   # Dockerの有効化
   virtualisation.docker.enable = true;
