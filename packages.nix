@@ -19,6 +19,7 @@
     # --- Web開発 ---
     nodejs_22
     pnpm
+    bun
 
     # --- Ruby ---
     rbenv
