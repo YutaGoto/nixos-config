@@ -32,6 +32,7 @@
 
     # --- アプリケーション ---
     vscode
+    code-cursor
     (pass.withExtensions (exts: [ exts.pass-otp ])) # 1Password CLI連携用
     postman
     slack
@@ -53,6 +54,7 @@
     "1password"
     "1password-cli"
     "vscode"
+    "cursor"
     "postman"
     "slack"
     "google-chrome"
