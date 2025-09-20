@@ -20,6 +20,7 @@
     nodejs_22
     pnpm
     bun
+    deno
 
     # --- Ruby ---
     rbenv
