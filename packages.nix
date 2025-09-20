@@ -42,6 +42,9 @@
   # Install firefox.
   programs.firefox.enable = true;
 
+  # Enable OneDrive
+  services.onedrive.enable = true;
+
   # Enable the Nix LDFLAGS wrapper for better compatibility with C programs
   programs.nix-ld.enable = true;
 
