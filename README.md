@@ -11,3 +11,9 @@ NixOSの構成管理をGitでバージョン管理し、再現性のあるシス
 ```bash
 sudo nixos-rebuild switch
 ```
+
+### アップグレード
+
+```bash
+sudo nixos-rebuild switch --upgrade
+```
