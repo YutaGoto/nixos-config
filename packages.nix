@@ -11,6 +11,7 @@
     wirelesstools
     home-manager
     gnumake
+    gcc
 
     # --- rust tools
     bat
@@ -21,9 +22,6 @@
     pnpm
     bun
     deno
-
-    # --- Ruby ---
-    rbenv
 
     # --- Python ---
     uv
