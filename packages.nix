@@ -1,6 +1,21 @@
 { config, lib, pkgs, ... }:
 
 {
+  nixpkgs.overlays = [
+    (import ./overlays/cursor.nix)
+  ];
+
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+    "1password-gui"
+    "1password"
+    "1password-cli"
+    "vscode"
+    "cursor"
+    "postman"
+    "slack"
+    "google-chrome"
+  ];
+
   # システム全体にインストールするパッケージ
   environment.systemPackages = with pkgs; [
     # --- 基本ツール ---
@@ -12,6 +27,7 @@
     home-manager
     gnumake
     gcc
+    appimage-run
 
     # --- rust tools
     bat
@@ -31,7 +47,8 @@
 
     # --- アプリケーション ---
     vscode
-    code-cursor
+    cursor
+    # code-cursor
     (pass.withExtensions (exts: [ exts.pass-otp ])) # 1Password CLI連携用
     postman
     slack
@@ -44,20 +61,13 @@
   # Enable the Nix LDFLAGS wrapper for better compatibility with C programs
   programs.nix-ld.enable = true;
 
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+  };
+
   # Dockerの有効化
   virtualisation.docker.enable = true;
-
-  # 1Password (GUI) とブラウザ連携の有効化
-  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-    "1password-gui"
-    "1password"
-    "1password-cli"
-    "vscode"
-    "cursor"
-    "postman"
-    "slack"
-    "google-chrome"
-  ];
 
   # Alternatively, you could also just allow all unfree packages
   # nixpkgs.config.allowUnfree = true;
