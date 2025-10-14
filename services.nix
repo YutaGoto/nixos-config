@@ -15,6 +15,13 @@
   # Nix Flakesと新しいnix-commandを有効化 (推奨)
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  programs.bash = {
+    shellInit = ''
+      export HISTSIZE=2000
+      export HISTFILESIZE=2000
+    '';
+  };
+
   programs.bash.shellAliases = {
     wifix = "sudo iwconfig wlp3s0 txpower 10dBm";
   };
