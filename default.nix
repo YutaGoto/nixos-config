@@ -10,6 +10,5 @@
     ./users.nix
     ./packages.nix
     ./services.nix
-    ./secrets.nix
   ];
 }

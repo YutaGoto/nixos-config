@@ -14,6 +14,7 @@
     "postman"
     "slack"
     "google-chrome"
+    "ngrok"
   ];
 
   # システム全体にインストールするパッケージ
@@ -28,6 +29,7 @@
     gnumake
     gcc
     appimage-run
+    lsof
 
     # --- rust tools
     bat
@@ -53,6 +55,7 @@
     postman
     slack
     google-chrome
+    ngrok
   ];
 
   # Install firefox.
