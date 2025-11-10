@@ -1,11 +1,11 @@
 final: prev: {
   cursor = final.stdenv.mkDerivation rec {
     pname = "cursor";
-    version = "1.7.33";
+    version = "2.0.54";
 
     src = final.fetchurl {
-      url = "https://downloads.cursor.com/production/a84f941711ad680a635c8a3456002833186c484f/linux/x64/Cursor-${version}-x86_64.AppImage";
-      sha256 = "0vllqj9g99wk9gwnpwcv64p35jxmvd27fpd6ms8izjcwb8szyx3d";
+      url = "https://downloads.cursor.com/production/7a31bffd467aa2d9adfda69076eb924e9062cb27/linux/x64/Cursor-${version}-x86_64.AppImage";
+      sha256 = "1ysgzxqg5gwmp1sy8m5bc3457rwvm9hkv9x2ccw4s7l0wgb2rnwx";
     };
 
     phases = [ "installPhase" ];
