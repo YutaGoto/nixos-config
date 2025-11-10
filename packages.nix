@@ -1,5 +1,8 @@
 { config, lib, pkgs, ... }:
 
+let
+  unstable = import <nixpkgs-unstable> { };
+in
 {
   nixpkgs.overlays = [
     (import ./overlays/cursor.nix)
@@ -50,7 +53,7 @@
     # --- アプリケーション ---
     vscode
     cursor
-    # code-cursor
+    unstable.zed-editor
     (pass.withExtensions (exts: [ exts.pass-otp ])) # 1Password CLI連携用
     postman
     slack
