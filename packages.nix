@@ -50,6 +50,9 @@ in
     # --- Rust ---
     rustup
 
+    # --- Go ---
+    go
+
     # --- アプリケーション ---
     vscode
     cursor
