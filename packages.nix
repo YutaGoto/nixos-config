@@ -30,6 +30,7 @@
     gcc
     appimage-run
     lsof
+    wl-clipboard
 
     # --- rust tools
     bat
