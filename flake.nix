@@ -20,13 +20,6 @@
         modules = [
           # 既存のdefault.nixをインポートして設定の中核とします
           ./default.nix
-
-          # overlays/cursor.nix をオーバーレイとして適用します
-          {
-            nixpkgs.overlays = [
-              (import ./overlays/cursor.nix)
-            ];
-          }
         ];
       };
     };
